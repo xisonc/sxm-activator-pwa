@@ -79,7 +79,7 @@ section.logo
 	-webkit-user-select: none;
 	background-size: contain;
 	background-repeat: no-repeat;
-    background-image: url('/assets/logo/logo.svg');
+    background-image: url('../logo/logo.svg');
     background-position: center center;
 }
 
