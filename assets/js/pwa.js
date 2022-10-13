@@ -37,23 +37,23 @@ const pwa = {
 
 	'proxycheck':	function()
 					{
-						pwa.fetch('')
+						pwa.fetch('corsdemo')
 						.then(response=>response.text())
 						.then(function(response)
 						{
-							// search for '/corsdemo'
-							if( response.includes('/corsdemo') )
+							// search for access
+							if( response.includes('You currently have temporary access to the demo server') )
+							{
+								// open 'begin' dialog
+								pwa.open('begin');
+							}
+							else
 							{
 								// open proxy dialog
 								pwa.open('proxy');
 
-								// try again in 5 seconds
-								setTimeout('pwa.proxycheck', 3000);
-							}
-							else
-							{
-								// open 'begin' dialog
-								pwa.open('begin');
+								// check again in 3 seconds
+								setTimeout(pwa.proxycheck, 3000);
 							}
 						});
 					},
