@@ -2,6 +2,8 @@
 	"name": "SXM Activator",
 	"description": "",
 	"display": "standalone",
+	"background_color": "#C40E0E",
+	"theme_color": "#C40E0E",
 	"orientation": "portrait-primary",
 	"lang": "en-US",
 	"scope": "/sxm-activator-pwa/",
