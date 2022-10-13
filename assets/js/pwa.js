@@ -10,7 +10,7 @@ const pwa = {
 						// register serviceworker if possible
 						if( 'serviceWorker' in navigator )
 						{
-							navigator.serviceWorker.register('./sw.js')
+							navigator.serviceWorker.register('./assets/js/sw.js')
 							.catch(function(error)
 							{
 								console.log('sw.js failed with ' + error);
