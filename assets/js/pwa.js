@@ -37,12 +37,11 @@ const pwa = {
 
 	'proxycheck':	function()
 					{
-						pwa.fetch('corsdemo')
-						.then(response=>response.text())
+						pwa.fetch('')
 						.then(function(response)
 						{
 							// search for access
-							if( response.includes('You currently have temporary access to the demo server') )
+							if( response.status == 200 )
 							{
 								// open 'begin' dialog
 								pwa.open('begin');
