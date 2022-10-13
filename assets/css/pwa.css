@@ -1,0 +1,144 @@
+/* page dom */
+html, body
+{
+	position: fixed;
+	overflow: hidden;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	font-size: 1.0em;
+	margin: 0;
+	padding: env(safe-area-inset-top) env(safe-area-inset-right) env(safe-area-inset-bottom) env(safe-area-inset-left);
+	color: #ffffff;
+	background-color: #c40e0e;
+	font-family: system-ui;
+	font-smoothing: antialiased;
+	osx-font-smoothing: grayscale;
+	box-sizing: border-box;
+}
+
+/* box-sizing fix */
+*, *:before, *:after
+{
+	box-sizing: inherit;
+}
+
+body
+{
+	min-width: 350px;
+	font-size: 1.0em;
+	overscroll-behavior-y: none;
+}
+
+/* box-sizing fix */
+*, *:before, *:after
+{
+	box-sizing: inherit;
+}
+
+
+/* 'app' dialogs */
+dialog
+{
+	display: none;
+	background: transparent;
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	border: 0;
+	padding: 0;
+	color: inherit;
+	text-align: center;
+	vertical-align: middle;
+}
+	dialog[open]
+	{
+		display: block;
+	}
+
+/* sections */
+dialog>section
+{
+	padding: 1em;
+}
+
+/* logo */
+section.logo
+{
+	display: block;
+	height: 6em;
+	width: 100%;
+	padding: 0;
+	text-align: center;
+	user-select: none;
+	-webkit-user-select: none;
+	background-size: contain;
+	background-repeat: no-repeat;
+    background-image: url('/assets/logo/logo.svg');
+    background-position: center center;
+}
+
+/* paddings */
+.padding5
+{
+	padding: 0.3em !important;
+}
+.padding10
+{
+	padding: 0.6em !important;
+}
+.padding15
+{
+	padding: 0.9em !important;
+}
+.padding20
+{
+	padding: 1.2em !important;
+}
+.padding25
+{
+	padding: 1.5em !important;
+}
+
+/* buttons */
+button
+{
+	font-size: 1.0em;
+	padding: 0.5em 1.0em;
+	border: 0;
+	background: #ffffff;
+	color: #c40e0e;
+	cursor: pointer;
+	text-transform: uppercase;
+	font-weight: 600;
+	border-radius: 0.35em;
+	user-select: none;
+	-webkit-user-select: none;
+}
+	button:disabled
+	{
+		cursor: not-allowed;
+		opacity: 0.5;
+	}
+
+/* buttons */
+input
+{
+	outline: none;
+	font-size: 1.5em;
+	padding: 0.2em 0.5em;
+	border: 0;
+	background: rgba(0,0,0,0.1);
+	color: #ffffff;
+	border: 0.1em solid #ffffff;
+	cursor: pointer;
+	text-transform: uppercase;
+	font-weight: 600;
+	border-radius: 0.35em;
+	text-align: center;
+}
