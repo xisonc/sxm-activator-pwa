@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<!-- required meta tags -->
+	<meta charset="UTF-8">
+	<meta http-equiv="content-type" content="text/html; charset=utf-8">
+	<meta name="viewport" content="viewport-fit=cover, width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+	<!-- title -->
+	<title>SXM Activator</title>
+	<meta name="application-name" content="SXM Activator">
+	<meta name="apple-mobile-web-app-title" content="SXM Activator">
+
+	<!-- manifest -->
+	<link rel="manifest" href="./manifest.json">
+
+	<!-- icons -->
+	<link rel="shortcut icon" href="./assets/icon/icon.svg">
+	<link rel="apple-touch-icon" href="./assets/icon/icon-512.png">
+
+	<!-- load css -->
+	<link rel="stylesheet" type="text/css" href="./assets/css/pwa.css" media="all">
+
+	<!-- preload js -->
+	<script async type="text/javascript" src="./assets/js/pwa.js"></script>
+
+	<!-- launch app -->
+	<script type="text/javascript">window.onload=function(){pwa.init()};</script>
+</head>
+<body>
+
+	<dialog id="app-default" open>
+
+		<section class="logo"></section>
+
+	</dialog>
+	<dialog id="app-offline">
+
+		<section class="logo"></section>
+		<section>
+			<div class="bold large">You are currently offline</div>
+			<div class="padding10">Please check your connection to the internet and try again.</div>
+			<div class="padding5"><button tabindex="-1" onclick="location.reload();">Reload</button></div>
+		</section>
+
+	</dialog>
+	<dialog id="app-proxy">
+
+		<section class="logo"></section>
+		<section>
+			<h2>CORS Proxy Check</h2>
+			<div class="padding10">Please click the button below to authorize your use of the proxy.
+			<div class="padding10">When the window has opened, click "<b>Request temporary access to the demo server</b>" then you can close the window.</div>
+			<div class="padding5">
+				<button tabindex="-1" onclick="window.open('https://cors-anywhere.herokuapp.com/');">Open Proxy Authorization</button>
+			</div>
+			<div class="padding10">The next step will start automatically once you return</div>
+		</section>
+
+	</dialog>
+	<dialog id="app-begin">
+
+		<section class="logo"></section>
+		<section>
+			<h2>Radio ID:</h2>
+			<div class="padding10"><input type="text" tabindex="1" id="radio_id" name="radio_id" value=""></div>
+			<div class="padding10">Ensure your Radio is turned on and antenna has a clear view of the sky.</div>
+			<div class="padding10">
+				<button tabindex="2" onclick="pwa.process();">Continue</button>
+			</div>
+		</section>
+
+	</dialog>
+	<dialog id="app-processing">
+
+		<section class="logo"></section>
+		<section>
+			<h2>Processing</h2>
+		</section>
+
+	</dialog>
+	<dialog id="app-success">
+
+		<section class="logo"></section>
+		<section>
+			<h2>Success!</h2>
+			<div class="padding10">Your radio should activate within the next 5 minutes.</div>
+			<div class="padding10">Please ensure your radio remains on until it activates.</div>
+			<div class="padding10">
+				<button onclick="pwa.open('begin');">Go Home</button>
+			</div>
+		</section>
+
+	</dialog>
+	<dialog id="app-error">
+
+		<section class="logo"></section>
+		<section>
+			<h2>Error</h2>
+			<div id="errmsg" class="padding10"></div>
+			<div class="padding10">
+				<button onclick="pwa.open('begin');">Try Again</button>
+			</div>
+		</section>
+
+	</dialog>
+
+</body>
+</html>

@@ -1,0 +1,23 @@
+{
+	"name": "SXM Activator",
+	"description": "",
+	"display": "standalone",
+	"orientation": "portrait-primary",
+	"lang": "en-US",
+	"scope": "/",
+	"start_url": "/index.html",
+	"icons": [
+		{
+			"purpose": "any",
+			"src": "/assets/icon/icon-512.png",
+			"sizes": "512x512",
+			"type": "image/png"
+		},
+		{
+			"purpose": "any",
+			"src": "/assets/icon/icon.svg",
+			"sizes": "any",
+			"type": "image/svg+xml"
+		}
+	]
+}
