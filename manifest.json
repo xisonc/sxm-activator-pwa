@@ -1,6 +1,11 @@
 {
 	"name": "SXM Activator",
-	"description": "",
+	"short_name": "SXM Activator",
+	"categories": [
+		"entertainment",
+		"utilities"
+	],
+	"description": "Activate your vehicle's radio.",
 	"display": "standalone",
 	"background_color": "#C40E0E",
 	"theme_color": "#C40E0E",
