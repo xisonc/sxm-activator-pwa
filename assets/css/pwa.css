@@ -71,16 +71,16 @@ dialog>section
 section.logo
 {
 	display: block;
-	height: 6em;
+	height: 8em;
 	width: 100%;
 	padding: 0;
 	text-align: center;
 	user-select: none;
 	-webkit-user-select: none;
-	background-size: contain;
+	background-size: 90%;
 	background-repeat: no-repeat;
-    background-image: url('../logo/logo.svg');
-    background-position: center center;
+	background-image: url('../logo/logo.svg');
+	background-position: center center;
 }
 
 /* paddings */
