@@ -1,4 +1,12 @@
-// absolute bare minimum to trigger install
-self.addEventListener('install', function(e){return;});
-self.addEventListener('activate', function(e){return;});
-self.addEventListener('fetch', function(e){return;});
+// import workbox
+importScripts('https://storage.googleapis.com/workbox-cdn/releases/5.1.2/workbox-sw.js');
+
+self.addEventListener("message", (event) => {
+	if( event.data && event.data.type === "SKIP_WAITING" )
+		self.skipWaiting();
+});
+
+workbox.routing.registerRoute(
+	new RegExp('/*'),
+	new workbox.strategies.StaleWhileRevalidate({cacheName: 'pwa-offline-1.0'})
+);
