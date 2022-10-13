@@ -14,6 +14,12 @@
 			"type": "image/png"
 		},
 		{
+			"purpose": "maskable",
+			"src": "./assets/icon/icon-512.png",
+			"sizes": "512x512",
+			"type": "image/png"
+		},
+		{
 			"purpose": "any",
 			"src": "./assets/icon/icon.svg",
 			"sizes": "any",
