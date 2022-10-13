@@ -2,7 +2,9 @@
 
 SXM Activator PWA
 
-Quick and dirty PWA to activate satellite radios on a trial account. 
+Proof of concept, quick and dirty PWA to activate satellite radios on a trial account.
+
+Using this PWA you understand what you are doing, this PWA comes with no warranty or liability for what you do with it.
 
 Inspired by https://github.com/parker-stephens/siriusxm-activator
 
@@ -16,4 +18,4 @@ You can also download and run the app locally using Firefox or Chrome, download 
 
 # Note
 
-This app funnels requests through a CORS-proxy to allow it to work client side. The app will detect if you need to activate the demo mode of the CORS proxy automatically, just follow the instructions.
+This app funnels requests through a CORS-anywhere proxy to allow it to work client side. The app will detect if you need to activate the demo mode of the CORS proxy automatically, just follow the instructions.
