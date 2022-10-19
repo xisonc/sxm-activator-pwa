@@ -37,7 +37,7 @@ const pwa = {
 
 	'proxycheck':	function()
 					{
-						pwa.fetch('')
+						pwa.fetch('', {'method': 'POST'})
 						.then(function(response)
 						{
 							// search for access
@@ -143,16 +143,15 @@ const pwa = {
 														'Accept': '*/*'
 													}
 									})
-						.then(response=>response.json())
 						.then(function(response)
 						{
-							if( response.httpStatusCode == 200 )
+							if( response.status == 200 )
 							{
 								pwa.p_activate();
 							}
 							else
 							{
-								pwa.error('Error fetching creating trial account.');
+								pwa.error('Error creating trial account.');
 								console.log(response);
 							}
 						});
@@ -181,7 +180,7 @@ const pwa = {
 							}
 							else
 							{
-								pwa.error('Error activating.');
+								pwa.error('Error sending activation signal.');
 								console.log(response);
 							}
 						});
