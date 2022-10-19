@@ -1,6 +1,7 @@
 const pwa = {
 
 	// vars
+	'version':		'1.0.5',
 	'useragent':	'Mozilla/5.0 (iPhone; CPU iPhone OS 15_5 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Mobile/19F77 [FBAN/FBIOS;FBDV/iPhone11,8;FBMD/iPhone;FBSN/iOS;FBSV/15.5;FBSS/2;FBID/phone;FBLC/en_US;FBOP/5]',
 	'radio_id':		'',
 	'claim_token':	'',
@@ -15,6 +16,13 @@ const pwa = {
 							{
 								console.log('sw.js failed with ' + error);
 							});
+						}
+
+						// set version in ui
+						var velement = document.getElementById('version');
+						if( velement )
+						{
+							velement.innerHTML = 'Version '+pwa.version;
 						}
 
 						// check for connectivity
