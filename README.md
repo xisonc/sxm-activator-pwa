@@ -8,6 +8,12 @@ Using this PWA you understand what you are doing, this PWA comes with no warrant
 
 Inspired by https://github.com/parker-stephens/siriusxm-activator
 
+# Version
+
+On Oct-19-2022 I added in a version indicator just below the logo on the "Enter Radio ID" page, use this to ensure you're running the latest version at all times.
+
+Current version: 1.0.5
+
 # How to use
 
 Go to https://xisonc.github.io/sxm-activator-pwa/ to try it.
