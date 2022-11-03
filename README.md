@@ -1,3 +1,11 @@
+# Currently Broken - Do Not Use
+
+Looks like SXM patched this method.
+
+I will update this repo if I ever find a work around.
+
+Thank you all. Remember, sharing is caring.
+
 # Info
 
 SXM Activator PWA
